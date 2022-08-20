@@ -1,24 +1,14 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import './@verti/styles/Sass/main.css';
+import Header from './@verti/Core/Header/Header';
+import Banner from './@verti/Core/Banner/Banner';
+import Feature from './@verti/Core/Feature/Feature';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div id='page-wrapper'>
+      <Header />
+      <Banner />
+      <Feature />
     </div>
   );
 }

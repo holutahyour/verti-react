@@ -1,0 +1,14 @@
+/* Actions */
+ul.actions {
+  list-style: none;
+  padding-left: 0;
+}
+ul.actions li {
+  display: inline-block;
+  padding: 0 0 0 0.25em;
+  margin: 0 0 0 0.25em;
+}
+ul.actions li:first-child {
+  margin-left: 0;
+  padding-left: 0;
+}/*# sourceMappingURL=action.css.map */
