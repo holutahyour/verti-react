@@ -1,0 +1,173 @@
+/* Basic */
+
+@-ms-viewport {
+    width: device-width;
+}
+
+// Set box model to border-box.
+// Based on css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice
+    html {
+        box-sizing: border-box;
+    }
+
+    *, *:before, *:after {
+        box-sizing: inherit;
+    }
+
+body {
+    @include vendor('background-image', ('linear-gradient(top, rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0))', 'url("images/bg01.png")'));
+    background-color: #f7f7f7;
+    background-position: top left, top left;
+    background-repeat: repeat-x, repeat;
+    background-size: 100% 30em, auto;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 13pt;
+    color: #696969;
+    font-weight: 300;
+    line-height: 2.25em;
+
+    // Stops initial animations until page loads.
+        &.is-preload {
+            *, *:before, *:after {
+                @include vendor('animation', 'none !important');
+                @include vendor('transition', 'none !important');
+            }
+        }
+
+}
+
+input, select, textarea {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 13pt;
+    color: #696969;
+    font-weight: 300;
+    line-height: 2.25em;
+}
+
+a {
+    color: #0090c5;
+    text-decoration: underline;
+
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #444;
+    font-weight: 800;
+
+    a {
+        color: inherit;
+        text-decoration: none;
+        outline: 0;
+    }
+}
+
+h2 {
+    font-size: 2.25em;
+    margin: 0 0 1.1em 0;
+    line-height: 1em;
+}
+
+h3 {
+    font-size: 1.35em;
+    margin: 0 0 1em 0;
+}
+
+b, strong {
+    font-weight: 600;
+    color: #444;
+}
+
+i, em {
+    font-style: italic;
+}
+
+br.clear {
+    clear: both;
+}
+
+sub {
+    position: relative;
+    top: 0.5em;
+    font-size: 0.8em;
+}
+
+sup {
+    position: relative;
+    top: -0.5em;
+    font-size: 0.8em;
+}
+
+hr {
+    border: 0;
+    border-top: solid 1px #eee;
+}
+
+blockquote {
+    border-left: solid 0.5em #eee;
+    padding: 1em 0 1em 2em;
+    font-style: italic;
+}
+
+p, ul, ol, dl, table {
+    margin-bottom: 2em;
+}
+
+
+/* Section/Article */
+
+section, article {
+    margin-bottom: 5em;
+}
+
+section > :last-child,
+article > :last-child,
+section:last-child,
+article:last-child {
+    margin-bottom: 0;
+}
+
+header {
+    margin: 0 0 2em 0;
+
+    h2, h3 {
+        margin: 0 0 0.25em 0;
+    }
+
+    p {
+        margin: 0;
+    }
+}
+
+footer {
+    margin: 2.5em 0 0 0;
+}
+
+
+/* XLarge */
+
+@include breakpoint('<=xlarge') {
+
+    /* Basic */
+
+        body, input, select, textarea {
+            font-size: 12pt;
+        }
+
+}
+
+
+/* Large */
+
+@include breakpoint('<=large') {
+
+    /* Basic */
+
+        body, input, select, textarea {
+            font-size: 11pt;
+        }
+
+}
+
