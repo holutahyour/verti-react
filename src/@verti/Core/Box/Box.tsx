@@ -11,7 +11,7 @@ interface IBox{
 function Box({imageUrl,heading,caption,body,imageAlt = ''}:IBox) {
   return (
     <section className="box feature">
-        <a href="void()" className="image featured"><img src={imageUrl} alt={imageAlt} /></a>
+        <a href="/" className="image featured"><img src={imageUrl} alt={imageAlt} /></a>
         <div className="inner">
             <header>
                 <h2>{heading}</h2>
